@@ -1,0 +1,19 @@
+{
+  "name": "jsconv",
+  "version": "1.0.0",
+  "description": "Convert Javascript Data to Python through JSON files",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Backend",
+    "Javascript",
+    "Python",
+    "Data",
+    "Conversion",
+    "Data"
+  ],
+  "author": "Jaival Patel",
+  "license": "ISC"
+}
