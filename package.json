@@ -1,6 +1,6 @@
 {
   "name": "jsconv",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "description": "Convert Javascript Data to Python through JSON files",
   "main": "./script.js",
   "scripts": {

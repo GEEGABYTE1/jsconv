@@ -83,8 +83,4 @@ jsconv_init = function (file_path) {
 
 }
 
-const jsconv_test = jsconv_init('new.json')
- // jsconv_test.writejs('key1', 'val2')
- // const returned_data = jsconv_test.readjs() 
- // specific_data = jsconv_test.loadjs('key')
 
