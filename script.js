@@ -21,6 +21,7 @@ class Jsconv {
             console.log('JSON data is saved')
     
         } catch (err) {
+            console.log(err)
             return err
         }
     }
@@ -32,16 +33,27 @@ class Jsconv {
             return returned_result
             
         } catch (err) {
+            console.log(err)
             return err
         }
     }
 
     updateJson(key, value) {
-        let dictionary = this.readjs()
-        const dictionary_obj = JSON.parse(dictionary)
+
+        try {
+            let dictionary = {key: value}
+            const stringified_dictionary = JSON.stringify(dictionary)
         
-        dictionary_obj[key] = value
-        return dictionary_obj
+            const dictionary_obj = JSON.parse(stringified_dictionary)
+            
+            dictionary_obj[key] = value
+            return dictionary_obj
+
+        } catch (err) {
+            console.log(err)
+            return err
+        }
+
     }
 
     loadjs(key) {
@@ -60,7 +72,19 @@ class Jsconv {
 
 
 
-exports.jsconv_init = function (file_path) {
+/*exports.jsconv_init = function (file_path) {
     const jsconv = new Jsconv(file_path)
     return jsconv
+}*/
+
+jsconv_init = function (file_path) {
+    const jsconv = new Jsconv(file_path)
+    return jsconv
+
 }
+
+const jsconv_test = jsconv_init('new.json')
+ // jsconv_test.writejs('key1', 'val2')
+ // const returned_data = jsconv_test.readjs() 
+ // specific_data = jsconv_test.loadjs('key')
+
