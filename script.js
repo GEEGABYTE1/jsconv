@@ -12,7 +12,7 @@ class Jsconv {
 
     }
 
-    writejs(key, value) {
+    writejs(key, value) { // user func
         
         const updated_object = this.updateJson(key, value)
         let data = JSON.stringify(updated_object)
@@ -27,7 +27,7 @@ class Jsconv {
     }
 
 
-    readjs() {
+    readjs() { // user_func
         try{
             const returned_result = fs.readFileSync(this.filepath, 'utf-8')
             return returned_result
@@ -56,7 +56,7 @@ class Jsconv {
 
     }
 
-    loadjs(key) {
+    loadjs(key) { //user func
         const returned_object = fs.readFileSync(this.filepath, 'utf-8')
         const returned_object_parsed = JSON.parse(returned_object)
         const result = returned_object_parsed[key]
